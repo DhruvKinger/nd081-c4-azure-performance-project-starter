@@ -41,16 +41,18 @@ In this project, you'll be tasked to do the following:
    - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 2. Dependencies to run the application locally
-   - [Python](https://www.python.org/downloads/)
+   - [Python 3.12](https://www.python.org/downloads/) (Python 3.10+ recommended)
    - Redis server (Instructions are available below). It is an in-memory database used for caching. 
 
-3. Required Python Packages
+3. Required Python Packages (Python 3.12 Compatible)
       ```bash
-      Flask==1.1.2
-      opencensus==0.7.13
-      opencensus-ext-azure==1.0.4
-      opencensus-ext-flask==0.7.3
-      redis==3.5.3
+      Flask==2.3.3
+      opencensus==0.11.4
+      opencensus-ext-azure==1.1.13
+      opencensus-ext-flask==0.8.1
+      opencensus-ext-logging==0.1.1
+      redis==5.0.1
+      Werkzeug==2.3.7
       ```
    All these packages above are also mentioned in the *requirements.txt* that you can use during the **Local Environment Setup**. 
 
@@ -76,17 +78,17 @@ If you want to run the application on localhost, follow the steps below; otherwi
       redis-cli ping
       ```
 
-3. **Create a Virtual Environment** (Optional) - It's your choice to work in a virtual environment. For this, you must have the [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html#via-pip) installed. Create and activate a virtual environment:
+3. **Create a Virtual Environment** (Recommended) - It's recommended to work in a virtual environment. Create and activate a virtual environment:
       ```bash
       # Navigate to the azure-vote/ folder 
       cd azure-vote/
       ```
       ```bash
       # Mac/Linux
-      python3 -m venv .venv 
+      python3.12 -m venv .venv 
       source .venv/bin/activate
       # Windows on Powershell or GitBash terminal
-      py -3 -m venv .venv
+      python -m venv .venv
       .venv\Scripts\activate
       ```
 
